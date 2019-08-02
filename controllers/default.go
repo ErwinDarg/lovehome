@@ -8,9 +8,7 @@ type MainController struct {
 	beego.Controller
 }
 
-type UserController struct {
-	beego.Controller
-}
+
 
 func (c *MainController) Get() {
 	c.Data["Website"] = "beego.me"
@@ -18,6 +16,3 @@ func (c *MainController) Get() {
 	c.TplName = "index.tpl"
 }
 
-func (c *UserController) Get() {
-	c.Ctx.WriteString("hello world")
-}
